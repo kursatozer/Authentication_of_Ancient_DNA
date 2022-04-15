@@ -1,13 +1,19 @@
+
 library(Rsamtools)
 library(magrittr)
 library(ggplot2)
 library(ggpubr)
 
+TAXID=
+FOLDER=""
 
 
-BAM="C:/Users/Kursat/proje/İznik/Patojen_otantikasyonu/itk095-b1e1l1p1_TAATGCG-TTACTTA_L002_ARmerged.210803_A00187_0543_BHCFVTDRXY.all.fastq.gz_PipelineOutput/1302.output.sorted.bam"
+BAM=paste0(FOLDER,"/",TAXID,".output.sorted.bam")
+MAPDAMAGE=paste0(FOLDER,"/","results_./", TAXID, ".output.bam")
 
-mapdamage="C:/Users/Kursat/proje/İznik/Patojen_otantikasyonu/itk095-b1e1l1p1_TAATGCG-TTACTTA_L002_ARmerged.210803_A00187_0543_BHCFVTDRXY.all.fastq.gz_PipelineOutput/1302.output.bam/"
+#BAM="itk095-b1e1l1p1_TAATGCG-TTACTTA_L002_ARmerged.210803_A00187_0543_BHCFVTDRXY.all.fastq.gz_PipelineOutput/1302.output.sorted.bam"
+
+#mapdamage="itk095-b1e1l1p1_TAATGCG-TTACTTA_L002_ARmerged.210803_A00187_0543_BHCFVTDRXY.all.fastq.gz_PipelineOutput/1302.output.bam/"
 
 param <- ScanBamParam(tag = "NM", what = c("qwidth"))
 
