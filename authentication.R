@@ -1,11 +1,6 @@
-```{r}
-
 library(Rsamtools)
-
 library(magrittr)
-
 library(ggplot2)
-
 library(ggpubr)
 
 
@@ -47,5 +42,3 @@ plot_3p <- ggplot(deamination3p,aes(x=Position, y=G_A)) + geom_line(color="blue"
   scale_y_continuous(position = "right")
 
 last_plot <- ggarrange(edit_plot, length_plot, plot_5p, plot_3p, labels = c("a","b","c"))
-
-```
