@@ -1,1 +1,1 @@
-# authentication_of_ancient_dna
+# Authentication_of_Ancient_DNA
